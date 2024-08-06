@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>aruco_filter</name>
+  <version>0.0.0</version>
+  <description>The your_package_name package</description>
+
+  <maintainer email="your_email@example.com">Your Name</maintainer>
+  <license>BSD</license>
+
+  <!-- Build tool dependency -->
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <!-- Build dependencies -->
+  <build_depend>roscpp</build_depend>
+  <build_depend>std_msgs</build_depend>
+  <build_depend>Eigen3</build_depend>
+
+  <!-- Execution dependencies -->
+  <exec_depend>roscpp</exec_depend>
+  <exec_depend>std_msgs</exec_depend>
+  <exec_depend>Eigen3</exec_depend>
+
+  <!-- Optional dependencies -->
+  
+  <export>
+    <cpp lisp="true"/>
+  </export>
+</package>

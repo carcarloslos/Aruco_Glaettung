@@ -7,7 +7,7 @@
 
 namespace plt = matplotlibcpp;
 //KEINE AHNUNG LOL
-ßstd::vector<double> linspace(double start, double end, int num) {
+std::vector<double> linspace(double start, double end, int num) {
     std::vector<double> linspaced;
     double delta = (end - start) / (num - 1);
 
@@ -82,14 +82,7 @@ int main() {
     }
 
     // Plot results
-    plt::plot(timestamps, true_positions, {{"label", "True Signal"}, {"color", "green"}});
-    plt::plot(timestamps, noisy_positions, {{"label", "Noisy Signal"}, {"color", "red"}});
-    plt::plot(timestamps, x, {{"label", "Kalman Filtered Signal"}, {"color", "blue"}});
-    plt::legend();
-    plt::xlabel("Time (s)");
-    plt::ylabel("Value");
-    plt::title("Signal Filtering with Kalman Filter");
-    plt::show();
+
 
     return 0;
 }
