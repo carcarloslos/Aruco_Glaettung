@@ -7,7 +7,6 @@ find_package(catkin REQUIRED COMPONENTS
 )
 
 find_package(Eigen3 REQUIRED)
-find_package(Python3 REQUIRED COMPONENTS Interpreter Development)
 
 catkin_package(
   INCLUDE_DIRS include
@@ -21,14 +20,12 @@ include_directories(
   ${catkin_INCLUDE_DIRS}
   ${EIGEN3_INCLUDE_DIR}
   ${PROJECT_SOURCE_DIR}/include/aruco_glaetter
-  ${Python3_INCLUDE_DIRS}
 )
 
 add_executable(signal_filter src/signal_filter.cpp)
 
 target_link_libraries(signal_filter
   ${catkin_LIBRARIES}
-  ${Python3_LIBRARIES}
 )
 
 add_dependencies(signal_filter ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
